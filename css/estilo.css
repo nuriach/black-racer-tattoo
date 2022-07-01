@@ -1,0 +1,723 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/*regla general sobre la familia tipografica*/
+body{
+	font-family: 'Palanquin', sans-serif;
+}
+
+/*INICIO DE HEADER-----------------------------------------------*/
+.posicionamiento{
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	justify-content: space-between;
+}
+/*reglas para distribuir los elementos del header equitativamente por el espacio correspondiente*/
+header{
+	background-color: black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 85px;
+}
+/*dimensiones del logo del header*/
+header img{
+	width: 90px;
+	margin-left: 50px;
+}
+/*reglas de posicionamiento del menu*/
+nav ul{
+	display: flex;
+}
+ul li{
+	margin-right: 30px;
+	list-style: none;
+}
+/*reglas especificas del los diferentes enlaces del menu*/
+li a{
+	font-size: 1.1em;
+	text-decoration: none;
+	color: #ef2ac1;
+	text-transform: uppercase;
+}
+/*reglas sobre el hover del menu*/
+li a:hover{
+	text-decoration: line-through;
+	color: white;
+}
+/*regla para bloquear las clases del menu desplegable en ordenador*/
+.abrir,.cerrar{
+	display: none;
+}
+/*FINAL DE HEADER-----------------------------------------------*/
+
+/*-----------------------------------------------PÁGINA DE INICIO--------------------------------------------*/
+/*reglas del posicionamiento de la imagen de presentacion del estudio*/
+.logo{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+/*Tamaño del logo principal*/
+.logo img{
+	width: 300px;	
+}
+/*Tamaño de la foto de fondo*/
+.fondo img{
+	width: 100%;
+	height: 100vh;
+}
+/*FINAL DE PRIMERA SECCION----------------------------------------*/
+
+/*INICIO SECCION DE INTRODUCCION AL ESTUDIO-----------------------------------------*/
+/*Posicionamiento de la seccion "CONOCENOS UN POCO"*/
+.introduccion{
+	width: 90%;
+	margin: auto;
+	margin-bottom: 50px;
+}
+/*Reglas de los titulos de las diferentes secciones*/
+.introduccion h2, .servicios h2, .trabajos h2{
+	font-size: 1.5em;
+	color: #ef2ac1;
+	text-transform: uppercase;
+	text-align: center;
+}
+/*Posicionamiento del contenido*/
+.introduccion div{
+	display: flex;
+	justify-content: space-between;
+}
+/*Regla para los párrafos*/
+.introduccion p{
+	text-align: justify;
+	margin: 30px;
+}
+/*Edicion del span del primer parrafo*/
+.introduccion p span{
+	font-size: 1.1em;
+	text-transform: uppercase;
+	color: #ef2ac1;
+}
+/*Tamaño y posicionamiento del vector de la seccion*/
+.introduccion .rosa img{
+	width: 90px;
+	height: 80px;
+	margin: 30px 0;
+}
+/*FINAL SECCION DE INTRODUCCION AL ESTUDIO-------------------------------------------*/
+
+/*INICIO SECCION ESTUDIO FOTOS------------------------------------------*/
+/*Posicionamiento y tamaño de la seccion de imagenes sobre el estudio*/
+.estudio{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding: 0 0 50px;
+}
+/*Tamaño de las imagenes de la seccion*/
+.estudio img{
+	width: 300px;
+}
+/*FINAL SECCION ESTUDIO FOTOS------------------------------------------*/
+
+/*INICIO SECCION DE SERVICIOS------------------------------------------*/
+/*Color de fondo de la seccion de servicios*/
+.servicios{ 
+	background-color: #ffedff;
+	padding-bottom: 40px;
+}
+/*Distribucion de la seccion de servicios*/
+.servicio{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.servicio p{
+	margin: 0 20px;
+}
+/*Alineacion de los tres tipos de servicios*/
+.tatuajes, .piercing, .laser{
+	text-align: center;
+	width: 30%;
+}
+/*tamaño de las imagenes*/
+.tatuajes img, .piercing img{
+	width: 120px;
+}
+.laser img{
+	width: 60px;
+}
+/*titulos de los servicios*/
+.servicio h4{
+	color: #ef2ac1;
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+/*FINAL SECCION DE SERVICIOS-----------------------------------------*/
+
+/*INICIO SECCION TRABAJOS------------------------------------------*/
+/*Posicionamiento del contenedor de los trabajos*/
+.imagenes{
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
+/*tamaños de las imagenes de los trabajos*/
+.imagenes img{
+	width: 320px;
+	margin: 20px;
+}
+
+/*-----------------------------------------------PÁGINA DE TRABAJOS------------------------------------------*/
+.seccion-trabajos h1{
+	font-size: 2em;
+	color: #ef2ac1;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 600;
+	margin: 30px 0;
+}
+.seccion-trabajos p{
+	text-align: center;
+	font-weight: normal;
+	margin: 0 100px 40px;
+}
+/*Distribucion de los dos apartados de imagenes*/
+.galeria, .galeria-dos{
+	width: 80%;
+	margin: 10px auto;
+	display: grid;
+	grid-template-columns: repeat(3,auto);
+	grid-template-rows: repeat(3,auto);
+	grid-gap: 10px;
+}
+.galeria-dos{
+	margin-bottom: 80px;
+}
+.galeria img, .galeria-dos img{
+	width: 100%;
+}
+/*Caracteristicas del boton para cargar mas imagenes*/
+.boton-imagenes{
+	display: flex;
+	justify-content: center;
+	margin: 20px;
+}
+.boton-imagenes a{
+	background-color: #ef2ac1;
+	text-decoration: none;
+	padding: 8px 35px;
+	color: white;
+	font-size: 1em;
+	margin-bottom: 40px;
+}
+/*Funcion para ocultar la segunda galeria y solo se carge con JS*/
+.galeria-oculta{
+	display: none;
+}
+
+/*-----------------------------------------------PÁGINA DE NOSOTROS------------------------------------------*/
+.seccion-nosotros h1{
+	font-size: 2em;
+	color: #ef2ac1;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 600;
+	margin: 30px 0;
+}
+.seccion-nosotros p{
+	text-align: center;
+	font-weight: normal;
+	margin: 0 100px 40px;
+}
+/*Distribucion de las etiquetas para seleccionar opciones*/
+.tabs{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.tabs ul{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.tabs li{
+	width: 120px;
+	border: 2px solid #777;
+	padding: 10px 50px;
+	border-radius: 50px 50px 0 0;
+	text-align: center;
+	margin: 15px;
+	margin-bottom: 20px;
+	list-style: none;
+}
+.tabs li:last-child{
+	margin: ;
+}
+/*Caracteristicas de la opcion activa de forma automatica*/
+.tabs li.activo{
+	background-color:#ef2ac1;
+	border: 2px solid black;
+}
+.tabs .activo a{
+	color: black;
+}
+.tabs li a{
+	color: #777;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+/*El panel activo de forma automatica muestra las imagenes correspondientes*/
+.panel.activo{
+	display: block;
+}
+/*El otro panel se oculta hasta que se haga click en la otra opcion*/
+.panel{
+	display: none;
+}
+/*Distribucion de las imagenes de los trabajadores*/
+.tatuadores-1,.tatuadores-2,.anilladores{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+/*Tamaños de imagenes y titulos de cada uno junto a sus RRSS*/
+.lucia img, .ignacio img, .carolina img, .jaime img, .victor img, .esther img{
+	width: 300px;
+	margin-bottom: 10px;
+}
+.lucia h2, .ignacio h2, .carolina h2, .jaime h2, .victor h2, .esther h2 {
+	text-transform: uppercase;
+	font-size: 1em;
+	text-align: center;
+	margin-bottom: 15px;
+}
+.rrss{
+	text-align: center;
+	margin-bottom: 30px;
+}
+.rrss img{
+	width: 40px;
+}
+
+/*-----------------------------------------------PÁGINA DE PREGUNTAS-----------------------------------------*/
+.preguntas h1{
+	font-size: 2em;
+	color: #ef2ac1;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 600;
+	margin: 30px 0;
+}
+/*Tamaño de los contenedores de las preguntas*/
+.uno,.dos,.tres,.cuatro,.cinco,.seis{
+	width: 60%;
+	margin: 25px auto;
+}
+.pregunta{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: black;
+	padding: 0 30px;
+}
+.pregunta h3{
+	color: white;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+.pregunta a{
+	color: white;
+	text-decoration: none;
+	font-size: 1.4em;
+	font-weight: bold;
+}
+/*Respuestas ocultas*/
+.respuesta{
+	padding: 4px 10px 4px 40px;
+	display: none;
+}
+/*Caracteristica para que se aparezcan las respuestas*/
+.desplegado{
+	display: block;
+}
+/*Boton con enlace a la pagina de contacto*/
+.dudas{
+	text-align: center;
+	margin: 40px 20px;
+}
+.dudas a{
+	background-color: #ef2ac1;
+	padding: 4px 20px;
+	text-decoration: none;
+	color: black;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	text-align: center;
+}
+/*-----------------------------------------------PÁGINA DE CONTACTO------------------------------------------*/
+.contacto h1{
+	font-size: 2em;
+	color: #ef2ac1;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 600;
+	margin: 30px 0;
+}
+/*Distribucio de los elementos*/
+.contenedor{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: 30px;
+}
+/*Dimensiones de el mapa y el contenedor del formulario*/
+.mapa img{
+	width: 400px;
+	border: 1.5px solid #ef2ac1;
+	padding: 5px;
+}
+.formulario{
+	width: 400px;
+	padding: 20px;
+}
+.formulario li{
+	text-transform: uppercase;
+	list-style: circle;
+	margin: 3px;
+}
+input{
+	margin: 10px;
+}
+input[type="text"]{
+	width: 100%;
+	border: none;
+	border-bottom: 1.5px solid #ef2ac1;
+}
+/*Caracteristcas de posicionamiento del selector de opciones*/
+.opciones{
+	display: flex;
+	justify-content: space-around;
+}
+.opciones li{
+	list-style: none;
+	border: 1px solid black;
+	border-radius: 8px;
+	padding: 0 10px;
+}
+.opciones li a{
+	font-size: 1em;
+	color: black;
+}
+/*Caracteristicas de la opcion seleccionada por defecto*/
+.opciones li.activo{
+	background-color: #ef2ac1;
+}
+.opciones li a:hover{
+	text-decoration: none;
+}
+/*eliminacion de bordes en los input*/
+input:focus{
+	outline: none;
+}
+textarea{
+	width: 100%;
+	border: 1.5px solid #ef2ac1;
+	outline: none;
+}
+input[type="submit"]{
+	width: 60px;
+	padding: 5px 0;
+	border: 1.5px solid #ef2ac1;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 1em;
+	color: black;
+	background-color: white;
+	cursor: pointer;
+	margin: 20px auto 0;
+	display: flex;
+	justify-content: center;
+}
+
+/*-----------------------------------------------FOOTER-----------------------------------------------------*/
+footer{
+ 	background-color: black;
+ 	color: white;
+ 	width: 100%;
+ 	display: flex;
+ 	justify-content: space-around;
+ 	align-items: center;
+ 	flex-wrap: wrap;
+ 	padding-top: 20px;
+ }
+ footer img{
+ 	width: 200px;
+ 	height: auto;
+ }
+ .informacion{
+ 	margin: 40px 0px;
+ }
+ .informacion img{
+ 	width: 20px;
+ 	height: auto;
+ 	margin-right: 15px;
+ }
+ .direccion, .telefono, .mail, .horario{
+ 	display: flex;
+ 	align-items: center;
+ 	margin: 20px 0;
+ }
+ .redes{
+ 	text-align: center;
+ }
+ .redes img{
+ 	width: 30px;
+ 	height: auto;
+ }
+
+ /*-----------------------------------------------RESPONSIVE-----------------------------------------------------*/
+/*Posicionamiento centrado del comntenido completo para pantallas mas grandes de 1500px*/
+@media screen and (min-width: 1500px){
+	.resolucion{
+		width: 1500px;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width: 850px){
+/*INICIO DEL HEADER-----------------------------------------------------------------*/
+/*Menu desplegable desde el lado derecho de la pagina*/
+nav{
+	position: fixed;
+	top: 0;
+	right: -100%;
+	padding: 20px;
+	width: calc(100% - 60px);
+	height: 40%;
+	background-color: rgba(239, 42, 193, 0.9);
+	transition: right 0.8s;
+	border-radius: 20px;
+	z-index: 1;
+}
+.desplegar{
+	right: -50%;
+}
+nav ul{
+	display: block;
+	margin-top: 50px;
+}
+nav li:not(:last-child){
+	margin-right: 0;
+}
+nav li:not(:first-child){
+	margin-top:20px;
+}
+li a{
+	color: black;
+}
+/*Bloqueo del hover principal*/
+li a:hover{
+	color: black;
+	text-decoration: none;
+}
+/*Caracteristicas especificas para el responsive con relacion al movimiento de menu desplegable creado en JS*/
+.abrir{
+	display: block;
+	width: 40px;
+	padding: 5px 25px 0;
+}
+.abrir span{
+	display: block;
+	height: 4px;
+	background-color: #ef2ac1;
+	margin-bottom: 5px;
+	border-radius: 10px;
+}
+.cerrar{
+	display: block;
+	text-decoration: none;
+	position: absolute;
+	font-size: 2em;
+	color: white;
+	margin: 2px;
+}
+/*FIN DEL HEADER-----------------------------------------------------------*/
+
+/*--------------------------------------PAGINA DE INICIO----------------------------------------------*/
+/*Cambios de tamaños en la primera seccion*/
+.logo{
+	height: 60vh;
+}
+.logo img{
+	width: 320px;	
+}
+.fondo img{
+	width: 100%;
+	height: 60vh;
+}
+
+/*Posicionamiento y modificacion de tamaños en la segunda seccion*/
+.introduccion div{
+	display: block;
+}
+.introduccion h2{
+	font-size: 1.2em;
+}
+.introduccion p{
+	margin: 0;
+	font-size: 0.9em;
+	text-align: center;
+}
+/*Cambio de posicion en los textos principales junto con el vector*/
+.introduccion .rosa{
+	display: flex;
+	justify-content: center;
+}
+.introduccion .rosa img{
+	width: 60px;
+	height: 60px;
+}
+
+/*Modificacion de tamaños en la tercera seccion*/
+.estudio{
+	padding: 0 0 20px;
+}
+.estudio img{
+	width: 200px;
+}
+
+/*Modificacion de tamaños de tipografia en la cuarta seccion*/
+.servicio h4{
+	font-size: 1em;
+}
+.servicio p{
+	font-size: 0.9em;
+}
+
+/*--------------------------------------PAGINA DE TRABAJOS----------------------------------------------*/
+.seccion-trabajos h1{
+	font-size: 1.7em;
+}
+.seccion-trabajos p{
+	margin: 0 70px 40px;
+	font-size: 0.9em;
+}
+/*Modificacion del grid original de 3 columnas a 1*/
+.galeria, .galeria-dos{
+	grid-template-columns: repeat(1,auto);
+	grid-template-rows: repeat(1,auto);
+}
+.boton-imagenes a{
+	padding: 6px 30px;
+	font-size: 0.9em;
+}
+/*--------------------------------------PAGINA DE NOSOTROS----------------------------------------------*/
+.seccion-nosotros h1{
+	font-size: 1.7em;
+}
+.seccion-nosotros p{
+	margin: 0 70px 40px;
+	font-size: 0.9em;
+}
+/*--------------------------------------PAGINA DE PREGUNTAS----------------------------------------------*/
+.preguntas h1{
+	font-size: 1.7em;
+}
+.pregunta h3, .respuesta p {
+	font-size: 0.9em;
+}
+/*--------------------------------------PAGINA DE CONTACTO----------------------------------------------*/
+.contacto h1{
+	font-size: 1.7em;
+}
+.mapa img{
+	width: 300px;
+}
+/*--------------------------------------FOOTER----------------------------------------------*/
+/*Modificacion de tamaños de tipografia*/
+.informacion p{
+	font-size: 0.9em;
+}
+}
+
+@media screen and (max-width: 650px){
+/*INICIO DEL HEADER-----------------------------------------------------------------*/
+/*Modificacion del menu desplegable para que ocupe el ancho 100%*/
+nav{
+	width: calc(100% - 40px);
+	height: 50%;
+}
+.desplegar{
+	right: 0;
+}
+/*FIN DEL HEADER-----------------------------------------------------------------*/
+/*--------------------------------------PAGINA DE INICIO----------------------------------------------*/
+/*Cambio de tamaños en las imagenes o vectores*/
+.fondo img{
+	min-width: 100%;
+	height: 50vh;
+}
+.logo{
+	height: 50vh;
+}
+.logo img{
+	width: 200px;	
+}
+.introduccion .rosa img{
+	width: 60px;
+	height: 60px;
+}
+.estudio img{
+	margin-bottom: 20px;
+}
+
+/*Cambio de posicion a vertical en la seccion de servicios*/
+.servicio{
+	display: block;
+}
+.tatuajes, .piercing, .laser{
+	text-align: center;
+	width: 100%;
+	margin-bottom: 35px;
+}
+.servicio p{
+	margin: 0 20px;
+}
+/*--------------------------------------PAGINA DE TRABAJOS----------------------------------------------*/
+.seccion-trabajos h1{
+	font-size: 1.5em;
+}
+.seccion-trabajos p{
+	margin: 0 50px 40px;
+	font-size: 0.8em;
+}
+.boton-imagenes a{
+	padding: 5px 25px;
+	font-size: 0.8em;
+}
+/*--------------------------------------PAGINA DE NOSOTROS----------------------------------------------*/
+.seccion-nosotros p{
+	margin: 0 50px 40px;
+	font-size: 0.8em;
+}
+/*--------------------------------------PAGINA DE PREGUNTAS----------------------------------------------*/
+.pregunta h3, .respuesta p {
+	font-size: 0.7em;
+}
+/*--------------------------------------PAGINA DE CONTACTO----------------------------------------------*/
+.mapa img{
+	width: 200px;
+}
+}
